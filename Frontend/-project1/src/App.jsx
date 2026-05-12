@@ -13,7 +13,7 @@ function App() {
     formData.append('profilepic',file)
     const res=await axios.post('http://localhost:3000/api/upload',formData)
     setimageURL(
-      `http://localhost:3000/api/upload/${res.data.filename}`
+      `http://localhost:3000/uploads/${res.data.filename}`
     )
   }
 
